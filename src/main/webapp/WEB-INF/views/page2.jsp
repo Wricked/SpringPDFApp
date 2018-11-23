@@ -9,7 +9,9 @@
 <p>Hello, ${name}</p>
 
 Form
-<form:form method="POST" action="/addHello" modelAttribute="retangulo">
+<form:form method="POST" action="/page3" modelAttribute="retangulo">
+    Nome: <input type="text" name="nome">
+    <br/>
     X: <input type="text" name="x">
     <br/>
     Y: <input type="text" name="y"/>

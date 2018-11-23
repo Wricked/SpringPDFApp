@@ -5,6 +5,8 @@ import javax.validation.constraints.NotNull;
 public class Retangulo {
 
     @NotNull
+    private String nome;
+    @NotNull
     private Integer x;
     @NotNull
     private Integer y;
@@ -43,5 +45,13 @@ public class Retangulo {
 
     public void setLargura(Integer largura) {
         this.largura = largura;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }
