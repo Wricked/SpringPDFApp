@@ -2,14 +2,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-    <title>${name}</title>
+    <title>Dimensions - ${name}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 <p>Hello, ${name}</p>
 
 Form
-<form:form method="POST" action="/page3" modelAttribute="retangulo">
+<form:form method="POST" action="/dimensions" modelAttribute="retangulo">
     Nome: <input type="text" name="nome">
     <br/>
     X: <input type="text" name="x">

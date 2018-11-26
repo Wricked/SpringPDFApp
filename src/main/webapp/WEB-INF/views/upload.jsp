@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>UploadCenter</title>
+    <title>UploadCenter - ${name}</title>
 </head>
 <body>
+<p>Hello, ${name}</p>
 
 <h1>Spring Boot file upload example</h1>
 
