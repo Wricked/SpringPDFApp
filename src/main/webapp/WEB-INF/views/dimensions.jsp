@@ -1,12 +1,18 @@
 <!DOCTYPE HTML>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="true" %>
 <html>
 <head>
-    <title>Dimensions - ${name}</title>
+    <title>Dimensions - <%= request.getParameter("first_name")%> </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>Hello, ${name}</p>
+<p>Hello, <%= session.getAttribute("name")%> </p>
+
+<c:if test="${message}">
+    ${message}
+</c:if>
 
 Form
 <form:form method="POST" action="/dimensions" modelAttribute="retangulo">
