@@ -1,0 +1,229 @@
+$sucess-color:  rgb(223, 240, 216);
+$error-color: rgb(255, 169, 164);
+$standard-font: Arial, SansSerif;
+$standard-color-table1: rgb(243, 243, 243);
+$standard-color-table2: rgb(255, 255, 255);
+$card-color-blue: rgb(51, 122, 183);
+
+@mixin button-leftIcon {
+    background-position: 13%;
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+    font-family: $standard-font;
+}
+
+/* Tables */
+
+table{
+
+    td, tr, th{
+        border: 2px solid rgb(221, 221, 221);
+    }   
+    th{
+        background-color: $standard-color-table1;
+    }
+    tr:nth-child(odd){
+        background-color: $standard-color-table2;
+    }
+    tr:nth-child(even){
+        background-color: $standard-color-table1;
+    }    
+}
+
+.sucess-log-table {
+    tr, th, td{
+        background-color: $sucess-color;
+    }
+}
+
+.fail-log-table{
+    tr, th, td{
+        background-color: $error-color;
+    }
+}
+
+.sucess-row td{
+    background-color: $sucess-color;
+}
+
+.fail-row td{
+    background-color: $error-color;
+}
+
+/* Buttons */
+
+.btn-choose{
+    background: rgb(40, 96, 144);
+    color: #ffffff;
+    background-image: url(../images/directory-icon.png);
+    background-position: 13%;
+    background-repeat: no-repeat;
+ }
+ 
+ .btn-reset{
+     background: rgb(255, 255, 255);
+     color: rgb(85, 85, 85);
+     border: 1px solid rgb(204, 204, 204);
+     background-image: url(../images/trash-icon.png);
+     @include button-leftIcon();
+ }
+ 
+ .btn-detail{
+    border: 1px solid #000000;
+    padding-left: 3em;
+    background-image: url(../images/plus-icon.png);
+    @include button-leftIcon();
+}
+
+ .btn-choose,.btn-reset{
+     border-radius: 0px;
+     padding-left: 2.7em;
+ }
+ 
+ .btn-import, .btn-param{
+     background: rgb(40, 96, 144);
+     color: #ffffff;
+     border: 1px solid rgb(18, 43, 64);
+ }
+
+ .btn-search{    
+    background-image: url(../images/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    color: transparent;
+ }
+ 
+/* Others */
+
+.has-error{
+    color:$error-color;
+    background-image: url(../images/error-icon.png);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    padding-left: 2.5em;
+    background-size: contain;
+    margin-top: .75em;
+    font-size: 14px;
+}
+
+.custom-card-body{
+    border:1.5px solid $card-color-blue;
+    border-radius: 0 0 5px 5px;
+
+    label{
+        font-weight: 700;
+        color: rgb(51, 51, 51);
+        margin-right: 1em;
+    }
+
+    span{
+        font-weight: normal;
+        color: #000000;
+    }
+}
+
+.custom-card-header{
+    background: $card-color-blue;
+    color: #ffffff;
+}
+
+.text-upload{
+    padding-left: 2.1em;
+    background-image: url(../images/file-icon.png);
+    background-repeat: no-repeat;
+    background-position: 1%;
+    background-size: auto;
+}
+
+.import-title{
+    font-weight: 700;
+    opacity: .8;
+    margin-bottom: 0px;
+}
+
+.modal-lg {
+    max-width: 100%;
+}
+
+.upload-warning img{
+    width: 4%;
+    height: 4%;
+}
+
+.hide{
+    display: none;
+}
+
+/* TABLE QUERY*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+    
+    td{
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+        white-space: nowrap;
+        text-align: left
+    }
+    
+	.history-table td:nth-of-type(1):before { content: "ID:"; }
+	.history-table td:nth-of-type(2):before { content: "Data:"; }
+	.history-table td:nth-of-type(3):before { content: "Usuário:"; }
+    
+    
+	.sucess-log-table, .fail-log-table {
+       td:nth-of-type(1):before { content: "SEQUÊNCIA:"; }
+       td:nth-of-type(2):before { content: "COD PRODUTO:"; }
+       td:nth-of-type(3):before { content: "DESCRIÇÃO:"; }
+       td:nth-of-type(4):before { content: "EMBALAGEM:"; }
+       td:nth-of-type(5):before { content: "QUANTIDADE:"; }
+       td:nth-of-type(6):before { content: "STATUS:"; }
+       td:nth-of-type(7):before { content: "DESCRIÇÃO:"; }
+
+    }
+        
+    .detail-table td:nth-of-type(1):before { content: "Usuário:"; }
+    .detail-table td:nth-of-type(2):before { content: "PEDIDO:"; }
+    .detail-table td:nth-of-type(3):before { content: "CLIENTE:"; }
+    .detail-table td:nth-of-type(4):before { content: "CNPJ:"; }
+    .detail-table td:nth-of-type(5):before { content: "LOJA:"; }
+    .detail-table td:nth-of-type(6):before { content: "DATA:"; }
+    .detail-table td:nth-of-type(7):before { content: "USUARIO:"; }
+    .detail-table td:nth-of-type(8):before { content: "STATUS:"; }
+    .detail-table td:nth-of-type(9):before { content: "DESCRIÇÃO:"; }
+    .detail-table td:nth-of-type(11):before { content: "CODIGO AFV:"; }
+}

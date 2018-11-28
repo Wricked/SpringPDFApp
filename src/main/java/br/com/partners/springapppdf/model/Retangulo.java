@@ -15,6 +15,14 @@ public class Retangulo {
     @NotNull
     private Integer largura;
 
+    public Retangulo(@NotNull String nome, @NotNull Integer x, @NotNull Integer y, @NotNull Integer altura, @NotNull Integer largura) {
+        this.nome = nome;
+        this.x = x;
+        this.y = y;
+        this.altura = altura;
+        this.largura = largura;
+    }
+
     public Integer getX() {
         return x;
     }

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6, p, span {
+  font-family: Arial, SansSerif; }
+
+/* Tables */
+table td, table tr, table th {
+  border: 2px solid #dddddd; }
+table th {
+  background-color: #f3f3f3; }
+table tr:nth-child(odd) {
+  background-color: white; }
+table tr:nth-child(even) {
+  background-color: #f3f3f3; }
+
+.sucess-log-table tr, .sucess-log-table th, .sucess-log-table td {
+  background-color: #dff0d8; }
+
+.fail-log-table tr, .fail-log-table th, .fail-log-table td {
+  background-color: #ffa9a4; }
+
+.sucess-row td {
+  background-color: #dff0d8; }
+
+.fail-row td {
+  background-color: #ffa9a4; }
+
+/* Buttons */
+.btn-choose {
+  background: #286090;
+  color: #ffffff;
+  background-image: url(../images/directory-icon.png);
+  background-position: 13%;
+  background-repeat: no-repeat; }
+
+.btn-reset {
+  background: white;
+  color: #555555;
+  border: 1px solid #cccccc;
+  background-image: url(../images/trash-icon.png);
+  background-position: 13%;
+  background-repeat: no-repeat; }
+
+.btn-detail {
+  border: 1px solid #000000;
+  padding-left: 3em;
+  background-image: url(../images/plus-icon.png);
+  background-position: 13%;
+  background-repeat: no-repeat; }
+
+.btn-choose, .btn-reset {
+  border-radius: 0px;
+  padding-left: 2.7em; }
+
+.btn-import, .btn-param {
+  background: #286090;
+  color: #ffffff;
+  border: 1px solid #122b40; }
+
+.btn-search {
+  background-image: url(../images/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  color: transparent; }
+
+/* Others */
+.has-error {
+  color: #ffa9a4;
+  background-image: url(../images/error-icon.png);
+  background-repeat: no-repeat;
+  background-position: 5%;
+  padding-left: 2.5em;
+  background-size: contain;
+  margin-top: .75em;
+  font-size: 14px; }
+
+.custom-card-body {
+  border: 1.5px solid #337ab7;
+  border-radius: 0 0 5px 5px; }
+  .custom-card-body label {
+    font-weight: 700;
+    color: #333333;
+    margin-right: 1em; }
+  .custom-card-body span {
+    font-weight: normal;
+    color: #000000; }
+
+.custom-card-header {
+  background: #337ab7;
+  color: #ffffff; }
+
+.text-upload {
+  padding-left: 2.1em;
+  background-image: url(../images/file-icon.png);
+  background-repeat: no-repeat;
+  background-position: 1%;
+  background-size: auto; }
+
+.import-title {
+  font-weight: 700;
+  opacity: .8;
+  margin-bottom: 0px; }
+
+.modal-lg {
+  max-width: 100%; }
+
+.upload-warning img {
+  width: 4%;
+  height: 4%; }
+
+.hide {
+  display: none; }
+
+/* TABLE QUERY*/
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  table, thead, tbody, th, td, tr {
+    display: block; }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+
+  tr {
+    border: 1px solid #ccc; }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%; }
+
+  td {
+    line-height: 1.5em;
+    text-align: center; }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left; }
+
+  .history-table td:nth-of-type(1):before {
+    content: "ID:"; }
+
+  .history-table td:nth-of-type(2):before {
+    content: "Data:"; }
+
+  .history-table td:nth-of-type(3):before {
+    content: "Usuário:"; }
+
+  .sucess-log-table td:nth-of-type(1):before, .fail-log-table td:nth-of-type(1):before {
+    content: "SEQUÊNCIA:"; }
+  .sucess-log-table td:nth-of-type(2):before, .fail-log-table td:nth-of-type(2):before {
+    content: "COD PRODUTO:"; }
+  .sucess-log-table td:nth-of-type(3):before, .fail-log-table td:nth-of-type(3):before {
+    content: "DESCRIÇÃO:"; }
+  .sucess-log-table td:nth-of-type(4):before, .fail-log-table td:nth-of-type(4):before {
+    content: "EMBALAGEM:"; }
+  .sucess-log-table td:nth-of-type(5):before, .fail-log-table td:nth-of-type(5):before {
+    content: "QUANTIDADE:"; }
+  .sucess-log-table td:nth-of-type(6):before, .fail-log-table td:nth-of-type(6):before {
+    content: "STATUS:"; }
+  .sucess-log-table td:nth-of-type(7):before, .fail-log-table td:nth-of-type(7):before {
+    content: "DESCRIÇÃO:"; }
+
+  .detail-table td:nth-of-type(1):before {
+    content: "Usuário:"; }
+
+  .detail-table td:nth-of-type(2):before {
+    content: "PEDIDO:"; }
+
+  .detail-table td:nth-of-type(3):before {
+    content: "CLIENTE:"; }
+
+  .detail-table td:nth-of-type(4):before {
+    content: "CNPJ:"; }
+
+  .detail-table td:nth-of-type(5):before {
+    content: "LOJA:"; }
+
+  .detail-table td:nth-of-type(6):before {
+    content: "DATA:"; }
+
+  .detail-table td:nth-of-type(7):before {
+    content: "USUARIO:"; }
+
+  .detail-table td:nth-of-type(8):before {
+    content: "STATUS:"; }
+
+  .detail-table td:nth-of-type(9):before {
+    content: "DESCRIÇÃO:"; }
+
+  .detail-table td:nth-of-type(11):before {
+    content: "CODIGO AFV:"; } }
+
+/*# sourceMappingURL=main.css.map */

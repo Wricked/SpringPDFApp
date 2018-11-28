@@ -4,19 +4,15 @@
 <%@ page session="true" %>
 <html>
 <head>
-    <title>Dimensions - <%= request.getParameter("first_name")%> </title>
+    <title>Dimensions - ${nomeCliente} </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>Hello, <%= session.getAttribute("name")%> </p>
+<p>Hello, ${nomeCliente} </p>
 
-<c:if test="${message}">
-    ${message}
-</c:if>
-
-Form
+Form ${arquivoPDF.arquivoPDF.name}
 <form:form method="POST" action="/dimensions" modelAttribute="retangulo">
-    Nome: <input type="text" name="nome">
+    Nome: <input type="text" name="nomeRegiao">
     <br/>
     X: <input type="text" name="x">
     <br/>

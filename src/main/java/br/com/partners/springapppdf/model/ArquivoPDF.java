@@ -8,9 +8,8 @@ public class ArquivoPDF {
     private File arquivoPDF;
     private ArrayList<Retangulo> retangulos;
 
-    public ArquivoPDF(File arquivoPDF, ArrayList<Retangulo> retangulos) {
+    public ArquivoPDF(File arquivoPDF) {
         this.arquivoPDF = arquivoPDF;
-        this.retangulos = retangulos;
     }
 
     public File getArquivoPDF() {
